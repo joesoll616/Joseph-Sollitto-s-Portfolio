@@ -24,7 +24,7 @@ const EDUCATION = [
     degree: 'B.S. Finance & Computer Science',
     school: 'University Name',
     year: '2021',
-    note: 'Magna Cum Laude · Dean's List · Finance Club President',
+    note: "Magna Cum Laude · Dean's List · Finance Club President",
   },
 ]
 
