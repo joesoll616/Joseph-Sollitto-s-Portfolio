@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface text-text-primary font-body antialiased;
+    background-color: #040d1a;
+  }
+
+  ::selection {
+    background: rgba(212, 169, 64, 0.25);
+    color: #f0dfa0;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #040d1a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e3050;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d4a940;
+  }
+}
+
+@layer components {
+  .gold-text {
+    background: linear-gradient(135deg, #d4a940 0%, #f0dfa0 50%, #b88c20 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .card-glass {
+    background: linear-gradient(145deg, rgba(15, 30, 52, 0.9), rgba(10, 22, 40, 0.95));
+    border: 1px solid rgba(30, 48, 80, 0.8);
+    backdrop-filter: blur(8px);
+  }
+
+  .btn-primary {
+    @apply relative overflow-hidden px-6 py-3 font-body font-medium text-sm tracking-wider uppercase;
+    background: linear-gradient(135deg, #d4a940, #b88c20);
+    color: #040d1a;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 0 24px rgba(212, 169, 64, 0.4);
+    transform: translateY(-1px);
+  }
+
+  .btn-ghost {
+    @apply px-6 py-3 font-body font-medium text-sm tracking-wider uppercase border;
+    border-color: rgba(30, 48, 80, 0.8);
+    color: #8ba0bc;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .btn-ghost:hover {
+    border-color: rgba(212, 169, 64, 0.5);
+    color: #d4a940;
+  }
+
+  .section-label {
+    @apply font-mono text-xs tracking-[0.25em] uppercase;
+    color: #d4a940;
+  }
+}
+
+/* Stagger animation helpers */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+
+.animate-fade-up {
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards;
+}

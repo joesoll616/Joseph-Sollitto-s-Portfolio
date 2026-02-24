@@ -1,0 +1,95 @@
+[
+  {
+    "id": "nvda-equity-research",
+    "title": "NVDA — Equity Research Report",
+    "category": "Equities",
+    "ticker": "NVDA",
+    "date": "Q4 2024",
+    "rating": "BUY",
+    "targetPrice": "$680",
+    "currentPrice": "$495",
+    "upside": "37%",
+    "summary": "Deep-dive into NVIDIA's data center dominance and AI accelerator moat. This report analyzes the structural tailwinds driving hyperscaler capex, competitive positioning against AMD and Intel, and the long-term monetization of the CUDA software ecosystem.",
+    "tags": ["Semiconductors", "AI/ML", "Growth", "Large Cap"],
+    "thesis": [
+      "NVIDIA holds an 80%+ share of AI training workloads, protected by an 11-year CUDA developer moat that competitors cannot replicate quickly.",
+      "Data center revenue is on track to triple over the next 24 months as hyperscalers (MSFT, GOOGL, AMZN) accelerate GPU procurement ahead of sovereign AI buildouts.",
+      "Blackwell architecture represents a step-change in inference efficiency, which expands the total addressable market beyond training into real-time enterprise inference.",
+      "At 28x forward EV/EBITDA vs. historical average of 35x, the stock remains undervalued relative to its earnings growth trajectory."
+    ],
+    "dcfHighlights": {
+      "wacc": "9.2%",
+      "terminalGrowthRate": "3.5%",
+      "revenueCAGR": "28%",
+      "impliedEV": "$1.68T",
+      "model": "3-Stage DCF with explicit 5-year forecast, fade period (years 6-10), and Gordon Growth terminal value."
+    },
+    "keyRisks": [
+      "Export controls restricting China sales (currently ~20% of revenue)",
+      "Customer concentration: top 5 hyperscalers = 46% of revenue",
+      "Cyclical capex slowdown if AI ROI disappoints enterprise buyers"
+    ]
+  },
+  {
+    "id": "dcf-lbo-model",
+    "title": "LBO Model — Private Equity Case Study",
+    "category": "Models",
+    "ticker": "PRIVATE",
+    "date": "Q3 2024",
+    "rating": "N/A",
+    "targetPrice": "N/A",
+    "currentPrice": "N/A",
+    "upside": "3.2x MoM",
+    "summary": "Full leveraged buyout model for a hypothetical mid-market industrial distribution company. Built from scratch in Excel with integrated three-statement model, debt schedule, and investor return analysis.",
+    "tags": ["LBO", "Private Equity", "Modeling", "Excel"],
+    "thesis": [
+      "Target company is a $180M revenue industrial distributor with stable EBITDA margins (~14%) and low capex requirements — ideal LBO candidate.",
+      "Entry at 7.5x EBITDA with 60/40 debt/equity split. Exit at 8.0x after 5 years via strategic sale.",
+      "Operational improvements: pricing optimization and working capital efficiency drive EBITDA expansion from 14% to 17.5% over the hold period.",
+      "Base case returns 3.2x MoM / 26% IRR, with downside scenario still generating 2.1x MoM / 16% IRR."
+    ],
+    "dcfHighlights": {
+      "wacc": "N/A (Equity IRR)",
+      "terminalGrowthRate": "N/A",
+      "revenueCAGR": "6.5%",
+      "impliedEV": "~$285M exit",
+      "model": "Full 3-statement LBO model with 5-year projection, debt waterfall, PIK toggle, and sensitivity tables."
+    },
+    "keyRisks": [
+      "Interest rate sensitivity — modeled at 7.5% blended rate on senior secured",
+      "Customer concentration in automotive sector (~30% of revenue)",
+      "Limited organic growth potential if end markets soften"
+    ]
+  },
+  {
+    "id": "portfolio-analytics-tool",
+    "title": "Portfolio Analytics Dashboard",
+    "category": "Code",
+    "ticker": "N/A",
+    "date": "Q2 2024",
+    "rating": "N/A",
+    "targetPrice": "N/A",
+    "currentPrice": "N/A",
+    "upside": "Open Source",
+    "summary": "Python-based portfolio analytics tool that pulls live data from Yahoo Finance, calculates risk metrics, and generates a PDF tearsheet. Built with Pandas, NumPy, Matplotlib, and yfinance.",
+    "tags": ["Python", "Quant", "Risk Analysis", "Open Source"],
+    "thesis": [
+      "Pulls live OHLCV data for any equity or ETF portfolio using the yfinance API, no paid data subscription required.",
+      "Calculates rolling Sharpe ratio, max drawdown, beta, VaR (95% historical), and Sortino ratio for each position and the blended portfolio.",
+      "Generates a clean 2-page PDF tearsheet using matplotlib and reportlab, formatted to match institutional standards.",
+      "Modular architecture makes it easy to plug in alternative data sources or add factor exposure analysis (Fama-French 3-factor)."
+    ],
+    "dcfHighlights": {
+      "wacc": "N/A",
+      "terminalGrowthRate": "N/A",
+      "revenueCAGR": "N/A",
+      "impliedEV": "N/A",
+      "model": "Risk engine: VaR, CVaR, Sharpe, Sortino, Beta, Max Drawdown — all computed from daily returns."
+    },
+    "keyRisks": [
+      "yfinance data quality issues for less-liquid securities",
+      "No live trading integration (read-only analytics)",
+      "PDF rendering requires reportlab dependency"
+    ]
+  }
+]
